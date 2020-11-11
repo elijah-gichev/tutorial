@@ -30,16 +30,7 @@ begin
 	assert(LaterInDay(p4, p1) = p4, 'TestLaterInDay fails on 14:12:10 and 14:12:44');
 end;
 
-procedure TestrLaterInYear();
-begin
-	var p1 := new DateTime(1999, 11, 21);
-	var p2 := new DateTime(2005, 7,  11);
-	var p3 := new DateTime(2020, 2, 20);
 
-	assert(LaterInYear(p2, p1) = p1, 'TestLaterInYear fails on 21.11 and 11.7');
-	assert(LaterInYear(p2, p3) = p2, 'TestLaterInYear fails on 20.2 and 11.7');
-	assert(LaterInYear(p3, p1) = p1, 'TestLaterInYear fails on 21.11 and 20.2');
-end;
 
 procedure TestDaysInYear();
 begin
